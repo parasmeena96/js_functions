@@ -1,118 +1,137 @@
 
 //Arrow function-------------------------------------------------------
 var functionName = () => {
-    document.write(" hello World  <br><br>" );
+    document.write(" hello World  <br><br>");
 };
 functionName();
 
 
 // Arrow function with parameter-------------------------------------------------------
 var function_with_parameter = (a, b) => {
-document.write(a + "<br>" + b + " <br>" + "<br>");
+    document.write(a + "<br>" + b + " <br>" + "<br>");
 };
 function_with_parameter(15, 20);
 
 // Arrow function with default parameter & rest parameter-------------------------------------------------------
 
 // defaullt-------------------------------------------------------
-var function_with_Default_parameter = (a, b=20) => {
-    document.write(a + "     " + b +"<br>");
+var function_with_Default_parameter = (a, b = 20) => {
+    document.write(a + "     " + b + "<br>");
 };
 function_with_Default_parameter(10);
 
 
 // Rest parameter-------------------------------------------------------
 var function_with_rest_parameter = (a, ...rest_function_Name) => {
-document.write(a+ " " + rest_function_Name + "<br>");    
+    document.write(a + " " + rest_function_Name + "<br>");
 };
 
-function_with_rest_parameter(10, 1,2,3,4,5,6,7,8,9,10  );
+function_with_rest_parameter(10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 // single statement Arrow function-------------------------------------------------------
-var function_single_statement = a => document.write(a + "<Br>");
-function_single_statement(50);
+var function_single_statement = a => document.write(a + "<Br>");function_single_statement(50);
 
 
 // Return value Arrow function -------------------------------------------------------
 // with curly braces
-var function_Return_value = (a,b) => { return a+b+"<br>"};
-document.write(function_Return_value(15,15));
-  
+var function_Return_value = (a, b) => { return a + b + "<br>" };
+document.write(function_Return_value(15, 15));
+
 // without curly braces
-var function_Return_value = (a,b) => a+b+"<br>"; 
-document.write(function_Return_value(15,25));
-
-
+var function_Return_value = (a, b) => a + b + "<br>";
+document.write(function_Return_value(15, 25));
 
 // function declaration -------------------------------------------------------
-function function_Name(a,b){
-    return a+b;
+function function_Name(a, b) {
+    return a + b;
 }
-document.write( function_Name (5,5) );
+document.write(function_Name(5, 5));
 
 // function declaration in Arrow function-------------------------------------
-(a,b) => a+b;
+(a, b) => a + b;
 //Arrow function---------------------------------------------------------------------------------------------------
 
 
 
 
 // callback function ---------------------------------------------------------------------------------------------
- function show(){
-     document.write("<br> <br>  hello i am callback function");
- }
-function callback_function(callback){
-callback();
+function show() {
+    document.write("<br> <br>  hello i am callback function");
+}
+function callback_function(callback) {
+    callback();
 }
 callback_function(show);
 
 // with argument -------------------------------
-function show_argument (a){
+function show_argument(a) {
     document.write("<br><br>i am with argument " + a);
 }
-function callback_function_argument(callback_argument){
-var a = "<strong>hello</strong>";
+function callback_function_argument(callback_argument) {
+    var a = "<strong>hello</strong>";
     callback_argument(a);
 }
 callback_function_argument(show_argument);
 
 // Different type callback function
 
-function callback_function(callback){
+function callback_function(callback) {
     callback();
-    }
-    callback_function(function(){
-        document.write("<br> <br>  <strong>hello i am callback function</strong>");
-    });
+}
+callback_function(function () {
+    document.write("<br> <br>  <strong>hello i am callback function</strong>");
+});
 
 // callback in arrow function
 
-function callback_function_arrow(callback){
+function callback_function_arrow(callback) {
     var b = 200;
     callback(b);
-    }
-    callback_function_arrow(b =>document.write("<br> <br>  <strong> hello i am callback function with arrow function </strong>" + b +"%"));
+}
+callback_function_arrow(b => document.write("<br> <br>  <strong> hello i am callback function with arrow function </strong>" + b + "%"));
 
 
 
 //callback synchronous function
 
-function show(){
+function show() {
     document.write("<br> <br>  hello i am callback synchronous function ");
 }
-function callback_function(callback){
-callback();
+function callback_function(callback) {
+    callback();
 }
 callback_function(show);
 document.write(" End");
 
 
 //callback asynchronous function 
-setTimeout(function synchronous_function(){
-document.write("i am synchronous function");
-},
-10000);
+// setTimeout(function synchronous_function() {
+//     document.write("i am synchronous function");
+// },
+//     10000);
 
-document.write(" END ");
+// document.write(" END ");
 
 // callback function ----------------------------------------------------------------------------------------------------
+
+
+
+// practice
+// call back function
+function callback_function_one(a,b){
+    document.write(a +  b);
+}
+function main_callback(callback){
+    var a = 15;
+    var b = 20;
+    callback(a,b);
+}
+main_callback(callback_function_one);
+
+function call_back(){
+    document.write("hello im call back funtion");
+}
+function call_back__(call_back_name){
+call_back_name();
+}
+call_back__(call_back);
