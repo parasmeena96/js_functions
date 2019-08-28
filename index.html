@@ -17,31 +17,34 @@
     <h1 id="result"></h1>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        // var btn = document.getElementById('clickMe');
-        var btns = document.getElementById('clickHere');
-        var result = document.getElementById('result');
+// this keyword
 
+
+        // var btn = document.getElementById('clickMe');
+        // var btns = document.getElementById('clickHere');
+        var result = document.getElementById('result');
+        var btns = document.getElementsByClassName('clickME');
         // btn.onclick = function () {
         //     //console.log(this);
         //     this.innerHTML  =" You just clicked me ";
         // };
 
 
-        // for (var i = 0; i < btns.length; i++) {
-        //     btns[i].onclick = function () {
-        //         result.innerHTML = this.innerHTML;
-        //         console.log(this);
-        //     };
-        // }
-
-
-        // jquery 
-        $(document).ready(function () {
-            $("#clickHere").click(function () {
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function () {
+                result.innerHTML = this.innerHTML;
                 console.log(this);
-            });
-        });
-//jquery
+            };
+        }
+
+
+        //------------------------ jquery -----------------------------
+            // $(document).ready(function () {
+            //     $("#clickHere").click(function () {
+            //         console.log(this);
+            //     });
+            // });
+       //------------------------ jquery -----------------------------
     </script>
 </body>
 

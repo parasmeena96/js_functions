@@ -29,7 +29,7 @@ var function_with_rest_parameter = (a, ...rest_function_Name) => {
 function_with_rest_parameter(10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 // single statement Arrow function-------------------------------------------------------
-var function_single_statement = a => document.write(a + "<Br>");function_single_statement(50);
+var function_single_statement = a => document.write(a + "<Br>"); function_single_statement(50);
 
 
 // Return value Arrow function -------------------------------------------------------
@@ -118,25 +118,43 @@ document.write(" End");
 
 // practice
 // call back function
-function callback_function_one(a,b){
-    document.write(a +  b);
+function callback_function_one(a, b) {
+    document.write(a + b);
 }
-function main_callback(callback){
+function main_callback(callback) {
     var a = 15;
     var b = 20;
-    callback(a,b);
+    callback(a, b);
 }
 main_callback(callback_function_one);
 
-function call_back(){
-    document.write("hello im call back funtion");
+function call_back() {
+    document.write("hello im call back funtion <br><br>");
 }
-function call_back__(call_back_name){
-call_back_name();
+function call_back__(call_back_name) {
+    call_back_name();
 }
 call_back__(call_back);
 
 
 
-//------------------------------THIS KEYWORD-----------------------------------------------------
+//------------------------------Immediately Invoked Function Expression (self execution anonymous function)-----------------------------------------------------
+
+        (function () {
+            document.write('IIFX function here ( <B>Immediately Invoked Function Expression<b>) without parameter');
+        })
+            ();
+
+        (function (a, b) {
+                document.write("<br><Br>",a+b, " with parameters <br><br><br>");
+        })
+            (15,90);
+
+
+
+
+
+
+
+
 
