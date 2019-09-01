@@ -15,8 +15,73 @@
     <button class="clickME">Click me3</button>
     <button class="clickME">Click me4 </button>
     <h1 id="result"></h1>
+    <br><br><br><br><br>
+
+
+
+<!-- events -->
+<h1>Events</h1>
+<button onkeydown="clickMe()">click me</button>
+<button onkeyup="clickMe_green()">click me</button>
+
+
+<!-- events -->
+<br>
+
+<select id="guns_main" onchange="change_gun()">
+    <option value="AWM">AWM</option>
+    <option value="KAR98">KAR98</option>
+    <option value="M24">M24</option>
+    <option value="VSS">VSS</option>
+</select>
+
+<p id="result"></p>
+<!-- Event	Description
+
+onchange	    An HTML element has been changed
+onclick	The     user clicks an HTML element
+onmouseover	    The user moves the mouse over an HTML element
+onmouseout	    The user moves the mouse away from an HTML element
+onkeydown	    The user pushes a keyboard key
+onload	    The browser has finished loading the page -->
+
+<!-- Events -->
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+
+function change_gun(){
+    var gun = document.getElementById("guns_main").value;
+    document.getElementById("result").innerHTML = "Your selected Gun: " + gun;
+}
+
+
+
+
+
+
+
+
+
+
+
+  // Events
+  function clickMe(){
+      document.body.style.backgroundColor="red";
+      document.body.style.color="white";
+  }
+  function clickMe_green(){
+      document.body.style.backgroundColor="orange";
+      document.body.style.color="white";
+  }
+
+
+
+
+
 // this keyword
 
 
@@ -45,6 +110,11 @@
             //     });
             // });
        //------------------------ jquery -----------------------------
+
+
+
+    
+
     </script>
 </body>
 
