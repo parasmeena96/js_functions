@@ -140,21 +140,54 @@ call_back__(call_back);
 
 //------------------------------Immediately Invoked Function Expression (self execution anonymous function)-----------------------------------------------------
 
-        (function () {
-            document.write('IIFX function here ( <B>Immediately Invoked Function Expression<b>) without parameter');
-        })
-            ();
+(function () {
+    document.write('IIFX function here ( <B>Immediately Invoked Function Expression<b>) without parameter');
+})
+    ();
 
-        (function (a, b) {
-                document.write("<br><Br>",a+b, " with parameters <br><br><br>");
-        })
-            (15,90);
-
-
+(function (a, b) {
+    document.write("<br><Br>", a + b, " with parameters <br><br><br>");
+})
+    (15, 90);
 
 
 
 
 
 
+
+
+
+// Arguments
+function argument_function(name, age, number) {
+    arguments[1] = " your are teenager ";
+
+    document.write(name);
+    document.write(age);
+    document.write(number);
+    // document.write("Your Name is ", name , " & your age is  " , age ,  "This is your mobile number " , number,"<br>");
+    // document.write("Your Name is ", name , " & your age is  " , age ,  "This is your mobile number " , number,"<br>");
+    //document.write(arguments[0], arguments[1], arguments[2]);
+}
+argument_function(" Test ", " 25 ", " 987654971521 <br><br>");
+
+
+
+// arguments length
+function arguments_length() {
+    // document.write(arguments.length);
+arguments[1] = 'Sonu';
+    for (i = 0; i < arguments.length; i++) {
+        document.write(arguments[i] + " ");
+    }
+}
+arguments_length("Paras_yash", "525 <br><br>");
+
+
+
+// arguments length
+
+
+
+// Arguments
 
