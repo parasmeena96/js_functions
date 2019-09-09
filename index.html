@@ -6,37 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>Document</title>
+
+    <script>
+        //AJAX 
+        // $(document).ready(function(){
+        // $('#click_load').click(function(){
+        // $('#data_section').load('load.html');
+        // });
+        // });
+
+        // $(document).ready(function () {
+        //     $("#click_me").click(function () {
+        //         $("#div_content").load("load.html");
+        //     });
+        // });
+    //ajax
+    </script>
 </head>
 
 <body>
-    <button class="clickME" id="clickHere">Click me1 </button>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Logo</a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                   HTML
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Css
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="css/grid_css.html">Grid css</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    jquery
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                   javaScript
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- <button class="clickME" id="clickHere">Click me1 </button>
     <button class="clickME">Click me2 </button>
     <button class="clickME">Click me3</button>
     <button class="clickME">Click me4 </button>
     <h1 id="result"></h1>
-    <br><br><br><br><br>
+    <br><br><br><br><br> -->
 
+    <!-- events -->
+    <!-- <h1>Events</h1>
+    <button onkeydown="clickMe()">click me</button>
+    <button onkeyup="clickMe_green()">click me</button> -->
+    <!-- events -->
+    <br>
 
+    <!-- <select id="guns_main" onchange="change_gun()">
+        <option value="AWM">AWM</option>
+        <option value="KAR98">KAR98</option>
+        <option value="M24">M24</option>
+        <option value="VSS">VSS</option>
+    </select>
 
-<!-- events -->
-<h1>Events</h1>
-<button onkeydown="clickMe()">click me</button>
-<button onkeyup="clickMe_green()">click me</button>
-
-
-<!-- events -->
-<br>
-
-<select id="guns_main" onchange="change_gun()">
-    <option value="AWM">AWM</option>
-    <option value="KAR98">KAR98</option>
-    <option value="M24">M24</option>
-    <option value="VSS">VSS</option>
-</select>
-
-<p id="result"></p>
-<!-- Event	Description
+    <p id="result"></p> -->
+    <!-- Event	Description
 
 onchange	    An HTML element has been changed
 onclick	The     user clicks an HTML element
@@ -45,81 +114,57 @@ onmouseout	    The user moves the mouse away from an HTML element
 onkeydown	    The user pushes a keyboard key
 onload	    The browser has finished loading the page -->
 
-<!-- Events -->
+    <!-- Events -->
 
 
-<!-- AJAX -->
-<section style="background:red; padding: 20px;" >
-    <h1>AJAX</h1>
-    <div id="data_section"></div>
-    <button id="click_load" class="btn btn-success">click me</button>
-</section>
-<!-- AJAX -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- AJAX -->
+    <!-- <div id="div_content" class="bg-dark text-white"> Hello</div>
+    <button id="click_me">Change Content</button> -->
+    <!-- AJAX -->
+
+    <script src="node_modules/ajax/lib/ajax.js"></script>
     <script>
+        // $(document).ready(function() {
+        //     $("#click_me").click(function() {
+        //         $("#div_content").load("load.html");
+        //     });
+        // });
 
-function change_gun(){
-    var gun = document.getElementById("guns_main").value;
-    document.getElementById("result").innerHTML = "Your selected Gun: " + gun;
-}
+        // function change_gun() {
+        // var gun = document.getElementById("guns_main").value;
+        // document.getElementById("result").innerHTML = "Your selected Gun: " + gun;
+        // }
 
-
-
-
-
-
-
-
-
-
-
-  // Events
-  function clickMe(){
-      document.body.style.backgroundColor="red";
-      document.body.style.color="white";
-  }
-  function clickMe_green(){
-      document.body.style.backgroundColor="orange";
-      document.body.style.color="white";
-  }
+        // Events
+        // function clickMe() {
+        // document.body.style.backgroundColor = "red";
+        // document.body.style.color = "white";
+        // }
+        // function clickMe_green() {
+        // document.body.style.backgroundColor = "orange";
+        // document.body.style.color = "white";
+        // }
 
 
-
-
-
-// this keyword
-
-
+        // this keyword
         // var btn = document.getElementById('clickMe');
         // var btns = document.getElementById('clickHere');
-        var result = document.getElementById('result');
-        var btns = document.getElementsByClassName('clickME');
+        // var result = document.getElementById('result');
+        // var btns = document.getElementsByClassName('clickME');
         // btn.onclick = function () {
-        //     //console.log(this);
-        //     this.innerHTML  =" You just clicked me ";
+        // //console.log(this);
+        // this.innerHTML =" You just clicked me ";
         // };
 
 
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].onclick = function () {
-                result.innerHTML = this.innerHTML;
-                console.log(this);
-            };
-        }
+        // for (var i = 0; i < btns.length; i++) { // btns[i].onclick=function () { // result.innerHTML=this.innerHTML; //
+        // console.log(this); // }; // } //------------------------ jquery ----------------------------- //
+        // $(document).ready(function () { // $("#clickHere").click(function () { // console.log(this); // }); //
+        // });
+        //------------------------ jquery ----------------------------- 
 
 
-        //------------------------ jquery -----------------------------
-            // $(document).ready(function () {
-            //     $("#clickHere").click(function () {
-            //         console.log(this);
-            //     });
-            // });
-       //------------------------ jquery -----------------------------
-
-
-
-    
 
     </script>
 </body>
